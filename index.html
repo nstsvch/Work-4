@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="./script.js"></script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header-logo">
+            <a href="#" >
+                <img src="img/Logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <label for="header-nav_list"></label>
+            <input id="header-nav_menu" type="checkbox">
+            <ul class="header-nav_list">
+                    <li class="header_item"><a href="">Расписание</a></li>
+                    <li class="header_item"><a href="">Итоговые отчеты</a></li>
+                    <li class="header_item"><a href="">Статистика</a></li>
+                    <span class="header_item">Еще</span>
+                </ul>        
+        </nav>
+        <div class="header-content-user">
+            <div class="ball">
+                <img class="ball_img" src="img/Ball.png" alt="ball">
+                <button><img src="img/Vector.png" alt="logo"></button> 
+            </div>
+            <div class="user-photo">
+                <img src="img/Ava.png" alt="photo">
+            </div>
+            <div class="user-cart">
+                <img src="img/Cart.png" alt="cart">
+                <div class="cart-counter">1</div>
+            </div>
+        </div> 
+    </header>
+    <main class="main container">
+        <section class="side-menu">
+            <div class="player">
+                <div class="ava">
+                    <img src="./img/Ava2.png" alt="">
+                    <div class="ava_info">
+                        <div class="rating">
+                            <span>89.40</span>
+                            <div class="ratio">
+                                <p class="ratio_number">999</p>
+                                <img src="./img/ratio up.png" alt="">
+                            </div>
+                        </div>
+                        <span>Елишакашвили Михо</span>
+                    </div>
+                </div>
+                <div class="edit">
+                    <img src="./img/edit.png" alt="">
+                    <p class="edit_text">Редактировать</p>
+                </div>
+            </div>
+            <div class="account-menu">
+                <button class="statistika-btn">
+                    <img class="statistika_image" src="./img/user.png" alt="">
+                    Статистика
+                    <span class="statistika-arrow"></span>
+                </button>
+                <div class="statistika-dropdown" id="Dropdown">
+                    <div type="radio" class="statistika_item" href="#"><p>Футбол</p></div>
+                    <div type="radio" class="statistika_item" href="#"><p>Баскетбол</p></div>
+                    <div type="radio" class="statistika_item" href="#"><p>Волейбол</p></div>
+                </div>
+                <div class="account_bar">
+                    <img src="./img/calendar.png" alt="">Ближайшие игры
+                </div>
+                <div class="account_bar">
+                    <img src="./img/report.png" alt="">Игровые отчёты
+                </div>
+                <div class="account_bar">
+                    <img src="./img/history.png" alt="">История заказов
+                </div>
+                <div class="account_bar logout">
+                    <img src="./img/log out.png" alt="">Выйти
+                </div>
+            </div>
+        </section>
+        <section class="stat-menu">
+            <div class="stat">
+                <div class="reward">
+                    <div class="reward-first">
+                        <div class="reward-item"><img src="./img/Group.png" alt=""></div>
+                        <div class="reward-item"><img src="./img/Group.png" alt=""></div>
+                        <div class="reward-item"><img src="./img/Group.png" alt=""></div>
+                        <div class="reward-item"><img src="./img/Group-bw.png" alt=""></div>
+                        <div class="reward-item"><img src="./img/Group-bw.png" alt=""></div>
+                    </div>
+                    <div class="reward-line"></div>
+                    <div class="reward-second">
+                        <div><img src="./img/Group.png" alt=""></div>
+                        <div><img src="./img/Group.png" alt=""></div>
+                        <div><img src="./img/Group.png" alt=""></div>
+                        <div><img src="./img/Group.png" alt=""></div>
+                        <div><img src="./img/Group.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="seasons">
+                    <div class="seasons-menu">
+                        <button class="seasons-menu-btn">Все сезоны</button>
+                        <button class="seasons-menu-btn">Сезон 2020/21</button>
+                    </div>
+                    <div class="seasons-items">
+                        <div class="seasons-item">
+                            <div class="seasons-item_content">
+                                <p class="seasons-item_content_name">Игры</p>
+                                <div class="seasons-item_content_number">36</div>
+                            </div>
+                        </div>
+                        <div class="seasons-item">
+                            <div class="seasons-item_content">
+                                <p class="seasons-item_content_name">Гол</p>
+                                <div class="seasons-item_content_number">67</div>
+                            </div>
+                        </div>
+                        <div class="seasons-item">
+                            <div class="seasons-item_content">
+                                <p class="seasons-item_content_name">Пас</p>
+                                <div class="seasons-item_content_number">136</div>
+                            </div>
+                        </div>
+                        <div class="seasons-item">
+                            <div class="seasons-item_content">
+                                <p class="seasons-item_content_name">Гол + пас</p>
+                                <div class="seasons-item_content_number">136</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="share">
+                    <p class="share-text">Поделиться</p>
+                    <div class="share-links">
+                        <div><a class="fb" href=""><img src="./img/fb.png" alt=""></a></div>
+                        <div><a class="vk" href=""><img src="./img/vk.png" alt=""></a></div>
+                        <div><a class="link" href=""><img src="./img/link.png" alt=""></a></div>
+                    </div>
+                    <div class="close"><img src="./img/Pattern.png" alt=""></div>
+                </div>
+            </div>
+            <select class="select">
+                <option value="value" selected>Формат</option>
+            </select>
+            <div class="season">
+                <table class="season-table">
+                    <thead class="season-table_head">
+                        <tr>
+                            <th>Сезон</th>
+                            <th>Кол-во игр</th>
+                            <th>Гол</th>
+                            <th>Пас</th>
+                            <th>Гол + Пас</th>
+                            <th>Рейтинг</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Сезон 2021/2020</th>
+                            <th>5</th>
+                            <th>5</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>89.40</th>
+                        </tr>
+                        <tr>
+                            <th>Сезон 2020/2019</th>
+                            <th>5</th>
+                            <th>3</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>89.40</th>
+                        </tr>
+                        <tr>
+                            <th>Сезон 2019/2018</th>
+                            <th>5</th>
+                            <th>5</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>89.40</th>
+                        </tr>
+                        <tr>
+                            <th>Сезон 2018/2017</th>
+                            <th>5</th>
+                            <th>5</th>
+                            <th>2</th>
+                            <th>5</th>
+                            <th>89.40</th>
+                        </tr>
+                        <tr>
+                            <th>Сезон 2017/2016</th>
+                            <th>5</th>
+                            <th>5</th>
+                            <th>3</th>
+                            <th>1</th>
+                            <th>89.20</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="footer-info">
+                <img src="./img/Logo-footer.png" width="187" height="32" alt="">
+                <div class="footer-download">
+                    <div><img src="./img/appstore.png" alt=""></div>
+                    <div><img src="./img/googleplay.png" alt=""></div>
+                </div>
+                <span class="footer-contacts">Наши контакты</span>
+                <span class="footer-phone"><img src="./img/phone.png" alt=""> +7 (495) 109-03-09</span>
+                <span class="footer-mail"><img src="./img/mail.png" alt=""> go@crossball.ru</span>
+            </div>
+            <div class="footer-links">
+                <div class="footer-link">
+                    <a href="">Разделы</a>
+                    <a href="">Главная</a>
+                    <a href="">Расписание</a>
+                    <a href="">Игровые отчёты</a>
+                    <a href="">Статистика</a>
+                </div>
+                <div class="footer-link">
+                    <a href="">Виды спорта</a>
+                    <a href="">Футбол</a>
+                    <a href="">Баскетбол</a>
+                    <a href="">Волейбол</a>
+                </div>
+                <div class="footer-link">
+                    <a href="">Полезное</a>
+                    <a href="">Как записаться?</a>
+                    <a href="">Ответы на вопросы</a>
+                    <a href="">Достижения</a>
+                </div>
+                <div class="footer-link">
+                    <a href="">Чё почём</a>
+                    <a href="">Абонементы</a>
+                    <a href="">Корп. клиентам</a>
+                    <a href="">Партнёры</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-line container"></div>
+        <div class="footer-end container">
+            <span>&#169;&nbsp;Все права защищены</span>
+            <div class="footer-icons">
+                <div><a href=""><img src="./img/IG.png" alt="inst"></a></div>
+                <div><a href=""><img src="./img/VK1.png" alt="vk"></a></div>
+                <div><a href=""><img src="./img/FB1.png" alt="fb"></a></div>
+                <div><a href=""><img src="./img/YT.png" alt="yt"></a></div>
+                <div><a href=""><img src="./img/Telegram.png" alt="tel"></a></div>
+                <div><a href=""><img src="./img/WA.png" alt="wa"></a></div>
+            </div>
+            <span>Cделали в Spans</span>
+        </div>
+    </footer>
+</body>
+</html>
