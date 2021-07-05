@@ -308,7 +308,9 @@ label, #header-nav_menu {
     height: 75px;
     border-radius: 5px;
     background: linear-gradient(240deg, rgba(90, 96, 231, 0.35) 6.34%, rgba(30, 30, 40, 0) 103.77%), #2C2C2C;
-    border: 1px solid #6171FF;
+    /* border: 1px solid #6171FF; */
+    border-image-source: linear-gradient(
+        to right, #6171FF, #6171FF);
 }
 .seasons-item_content {
     padding: 10px;
@@ -361,10 +363,12 @@ label, #header-nav_menu {
     appearance: none;
     background-position: right 15px top 50%;
     margin-bottom: 20px;
+    font-family: "Proxima Nova";
 }
 .season {
     width: 1015px;
 }
+/*Table*/
 .season-table {
     width: 100%;
     box-shadow: 0px 2px 4px #E9E9E9;
@@ -378,6 +382,9 @@ label, #header-nav_menu {
     color: #909090;
     font-size: 12px;
     vertical-align: bottom;
+}
+.season-table thead th {
+    cursor: pointer;
 }
 .season-table tr, .season-table th {
     font-weight: 400;
@@ -438,7 +445,7 @@ label, #header-nav_menu {
 .footer-content {
     padding-top: 50px;
     display: flex;
-    margin-bottom: 33px;
+    margin-bottom: 23px;
 }
 .footer-info {
     display: flex;
@@ -487,10 +494,11 @@ label, #header-nav_menu {
 .footer-end {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;    
+    align-items: center;  
 }
 .footer-icons {
     display: flex;
+    margin-top: 15px;
 }
 .footer-end span {
     margin-top: 18px;
@@ -498,6 +506,9 @@ label, #header-nav_menu {
 }
 .footer-phone, .footer-mail {
     display: flex;
+}
+.footer-phone {
+    padding-bottom: 10px;
 }
 .footer-phone img, .footer-mail img {
     margin-right: 10px;

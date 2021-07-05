@@ -150,57 +150,57 @@
                 <option value="value" selected>Формат</option>
             </select>
             <div class="season">
-                <table class="season-table">
+                <table class="season-table" id="season-table">
                     <thead class="season-table_head">
                         <tr>
                             <th>Сезон</th>
-                            <th>Кол-во игр</th>
-                            <th>Гол</th>
-                            <th>Пас</th>
-                            <th>Гол + Пас</th>
-                            <th>Рейтинг</th>
+                            <th onclick="sort(true, 'count')">Кол-во игр</th>
+                            <th onclick="sort(true, 'goals')">Гол</th>
+                            <th onclick="sort(true, 'pass')">Пас</th>
+                            <th onclick="sort(true, 'goalsAndPass')">Гол + Пас</th>
+                            <th onclick="sort(true, 'raiting')">Рейтинг</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th>Сезон 2021/2020</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>2</th>
-                            <th>1</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2020/2019</th>
-                            <th>5</th>
-                            <th>3</th>
-                            <th>2</th>
-                            <th>1</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2019/2018</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>2</th>
-                            <th>1</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2018/2017</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>2</th>
-                            <th>5</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2017/2016</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>3</th>
-                            <th>1</th>
-                            <th>89.20</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                     </tbody>
                 </table>
