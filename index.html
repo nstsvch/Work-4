@@ -16,14 +16,15 @@
             </a>
         </div>
         <nav class="header-nav">
+            <div class="header-bag"><img src="./img/bag.png" alt=""></div>
             <label for="header-nav_list"></label>
-            <input id="header-nav_menu" type="checkbox">
+            <input id="header-nav_list" type="checkbox">
             <ul class="header-nav_list">
                     <li class="header_item"><a href="">Расписание</a></li>
                     <li class="header_item"><a href="">Итоговые отчеты</a></li>
                     <li class="header_item"><a href="">Статистика</a></li>
                     <span class="header_item">Еще</span>
-                </ul>        
+            </ul>        
         </nav>
         <div class="header-content-user">
             <div class="ball">
@@ -39,7 +40,7 @@
             </div>
         </div> 
     </header>
-    <main class="main container">
+    <main class="main">
         <section class="side-menu">
             <div class="player">
                 <div class="ava">
@@ -58,6 +59,14 @@
                 <div class="edit">
                     <img src="./img/edit.png" alt="">
                     <p class="edit_text">Редактировать</p>
+                </div>
+                <div class="share_mobile">
+                    <p class="share-text">Поделиться</p>
+                    <div class="share-links">
+                        <div><a class="fb" href=""><img src="./img/fb.png" alt=""></a></div>
+                        <div><a class="vk" href=""><img src="./img/vk.png" alt=""></a></div>
+                        <div><a class="link" href=""><img src="./img/link.png" alt=""></a></div>
+                    </div>
                 </div>
             </div>
             <div class="account-menu">
@@ -106,7 +115,7 @@
                 </div>
                 <div class="seasons">
                     <div class="seasons-menu">
-                        <button class="seasons-menu-btn">Все сезоны</button>
+                        <button class="seasons-menu-btn seasons-menu-btn_active">Все сезоны</button>
                         <button class="seasons-menu-btn">Сезон 2020/21</button>
                     </div>
                     <div class="seasons-items">
@@ -150,57 +159,57 @@
                 <option value="value" selected>Формат</option>
             </select>
             <div class="season">
-                <table class="season-table">
+                <table class="season-table" id="season-table">
                     <thead class="season-table_head">
                         <tr>
                             <th>Сезон</th>
-                            <th>Кол-во игр</th>
-                            <th>Гол</th>
-                            <th>Пас</th>
-                            <th>Гол + Пас</th>
-                            <th>Рейтинг</th>
+                            <th onclick="sort(true, 'count')">Кол-во игр</th>
+                            <th onclick="sort(true, 'goals')">Гол</th>
+                            <th onclick="sort(true, 'pass')">Пас</th>
+                            <th onclick="sort(true, 'goalsAndPass')">Гол + Пас</th>
+                            <th onclick="sort(true, 'raiting')">Рейтинг</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th>Сезон 2021/2020</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>2</th>
-                            <th>1</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2020/2019</th>
-                            <th>5</th>
-                            <th>3</th>
-                            <th>2</th>
-                            <th>1</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2019/2018</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>2</th>
-                            <th>1</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2018/2017</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>2</th>
-                            <th>5</th>
-                            <th>89.40</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                         <tr>
                             <th>Сезон 2017/2016</th>
-                            <th>5</th>
-                            <th>5</th>
-                            <th>3</th>
-                            <th>1</th>
-                            <th>89.20</th>
+                            <th class="count">5</th>
+                            <th class="goals">5</th>
+                            <th class="pass">2</th>
+                            <th class="goalsAndPass">1</th>
+                            <th class="raiting">89.40</th>
                         </tr>
                     </tbody>
                 </table>
@@ -208,9 +217,17 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer-content container">
+        <div class="footer-content">
             <div class="footer-info">
-                <img src="./img/Logo-footer.png" width="187" height="32" alt="">
+                <img class="footer-logo" src="./img/Logo-footer.png" width="187" height="32" alt="">
+                <div class="footer-icons_mobile">
+                    <div><a href=""><img src="./img/IG.png" alt="inst"></a></div>
+                    <div><a href=""><img src="./img/VK1.png" alt="vk"></a></div>
+                    <div><a href=""><img src="./img/FB1.png" alt="fb"></a></div>
+                    <div><a href=""><img src="./img/YT.png" alt="yt"></a></div>
+                    <div><a href=""><img src="./img/Telegram.png" alt="tel"></a></div>
+                    <div><a href=""><img src="./img/WA.png" alt="wa"></a></div>
+                </div>
                 <div class="footer-download">
                     <div><img src="./img/appstore.png" alt=""></div>
                     <div><img src="./img/googleplay.png" alt=""></div>
@@ -247,8 +264,12 @@
                 </div>
             </div>
         </div>
-        <div class="footer-line container"></div>
-        <div class="footer-end container">
+        <div class="span-mobile">
+            <p>&#169;&nbsp;Все права защищены</p>
+            <p>Cделали в <span class="spans">Spans</span></p>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-end">
             <span>&#169;&nbsp;Все права защищены</span>
             <div class="footer-icons">
                 <div><a href=""><img src="./img/IG.png" alt="inst"></a></div>

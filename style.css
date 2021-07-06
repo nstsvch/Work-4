@@ -6,13 +6,11 @@
 }
 
 body {
-    width: 1440px;
-    font-family: "Proxima Nova";
+    min-width: 1440px;
+    width: 100%;
+    font-family: "Proxima Nova", sans-serif;
     font-size: 16px;
     background-color: #FAF9F9
-}
-.container {
-    margin: 0 40px;
 }
 /*Header*/
 .header {
@@ -57,11 +55,11 @@ body {
 .header-content-user {
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 30%;
     justify-content: space-between;
     margin-right: 40px;
 }
-label, #header-nav_menu {
+label, #header-nav_list, .header-bag {
     display: none;
 }
 .ball {
@@ -99,7 +97,7 @@ label, #header-nav_menu {
 }
 /*Letf-menu*/
 .side-menu {
-    width: 295px;
+    min-width: 295px;
     height: 800px;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 4px #E9E9E9;
@@ -107,7 +105,7 @@ label, #header-nav_menu {
     margin-right: 50px;
 }
 .player {
-    width: 295px;
+    width: 100%;
     height: 184px;
     border-radius: 10px;
     background: linear-gradient(240deg, 
@@ -129,10 +127,10 @@ label, #header-nav_menu {
 .ava_info {
     font-size: 20px;
     margin-left: 10px;
+    position: relative;
 }
 .rating {
     font-size: 30px;
-    position: relative;
     width: 121px;
     height: 33px;
     margin-bottom: 3px;
@@ -171,6 +169,9 @@ label, #header-nav_menu {
     color:#ACAFF3;
     font-size: 12px;
     text-decoration: underline;
+}
+.share_mobile {
+    display: none;
 }
 .account-menu {
     margin-left: 20px;
@@ -223,10 +224,13 @@ label, #header-nav_menu {
 .account_bar {
     display: flex;
     align-items: center;
-    width: 210px;
-    height: 32px;
+    min-width: 210px;
+    height: 40px;
     margin-bottom: 5px;
     margin-left: 15px;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 10px;
 }
 .account-menu img {
     padding-right: 5px;
@@ -237,24 +241,24 @@ label, #header-nav_menu {
 .main {
     display: flex;
     margin-bottom: 247px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 /*Right-menu*/
-.stat-menu {
-    width: 70%;   
-}
 .stat {
     background: linear-gradient(240deg, 
     rgba(90, 96, 231, 0.35) 0%, rgba(30, 30, 40, 0) 100% ), #2c2c2c;
     height: 184px;
     border-radius: 10px;
-    min-width: 1015px;
-    width: 70%;
+    /* width: 70%; */
+    width: 1015px;
     display: flex;
     margin-bottom: 20px;
 }
 .reward {
     padding-left: 20px;
     width: 275px;
+    order: 1;
 }
 .reward-first {
     display: flex;
@@ -280,6 +284,7 @@ label, #header-nav_menu {
 .seasons {
     width: 440px;
     margin-left: 50px;
+    order: 2;
 }
 .seasons-menu {
     display: flex;
@@ -297,7 +302,12 @@ label, #header-nav_menu {
     font-size: 16px;
     font-weight: 400;
     color: #ACAFF3;
-    letter-spacing: 0.8px;
+    font-family: "Proxima Nova";
+}
+.seasons-menu-btn_active {
+    background: #5A60E7;
+    color: #FFFFFF;
+    border-radius: 3px;
 }
 .seasons-items{
     display: flex;
@@ -327,6 +337,7 @@ label, #header-nav_menu {
 .share {
     margin-left: 44.5px;
     position: relative;
+    order: 3;
 }
 .share-text {
     margin-top: 10px;
@@ -361,6 +372,7 @@ label, #header-nav_menu {
     appearance: none;
     background-position: right 15px top 50%;
     margin-bottom: 20px;
+    font-family: "Proxima Nova";
 }
 .season {
     width: 1015px;
@@ -436,6 +448,8 @@ label, #header-nav_menu {
     width: 100%;
 }
 .footer-content {
+    margin-left: 40px;
+    margin-right: 40px;
     padding-top: 50px;
     display: flex;
     margin-bottom: 33px;
@@ -481,10 +495,14 @@ label, #header-nav_menu {
     padding-bottom: 10px;
 }
 .footer-line {
+    margin-left: 40px;
+    margin-right: 40px;
     height: 1px;
     background-color: #D6D7F9;
 }
 .footer-end {
+    margin-left: 40px;
+    margin-right: 40px;
     display: flex;
     justify-content: space-between;
     margin-top: 15px;    
@@ -502,3 +520,243 @@ label, #header-nav_menu {
 .footer-phone img, .footer-mail img {
     margin-right: 10px;
 }
+.footer-icons_mobile, .span-mobile {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    body {
+        background-color: #FAF9F9;
+    }
+    .header {
+      height: 60px;
+      margin-bottom: 0;
+      width: 100vw;
+    }
+    .header-logo {
+        margin-left: 10px;
+        margin-right: 104px;
+    }
+    .header-logo img {
+        width: 120px;
+        height: 20px;
+    }
+    .header-bag {
+        display: block;
+        margin-right: 27px;
+    }
+    label {
+        display: block;
+        width: 24px;
+        height: 23px;
+        background-image: url(./img/burger.png);
+    }
+    .header-nav_list {
+        height: 0;
+        visibility: hidden;
+        flex-direction: column;
+    } 
+    input[type="checkbox"]:checked ~ .header-nav_list {
+        height: auto;
+        visibility: visible;
+    }
+    .header-content-user {
+        display: none;
+    }
+    .main {
+        display: block;
+        width: 100vw;
+        margin: 0;
+    }
+    .side-menu {
+        width: 100vw;
+        height: 235px;
+        background-color: #FAF9F9;
+        border-radius: 0;
+    }
+    .player {
+        border-radius: 0;
+        height: 155px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .ava {
+        margin-bottom: 21px;
+        padding-left: 10px;
+    }
+    .edit {
+        padding-left: 10px;
+    }
+    .ava_info {
+        font-size: 16px;
+    }
+    .account-menu {
+        display: flex;
+        overflow-x: auto;
+        margin-left: 0;
+        height: 57px;
+    }
+    .rating {
+        font-size: 20px;
+        width: 42px;
+        height: 16px;
+        margin-bottom: 21px
+    }
+    .share_mobile {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+    }
+    .share-links div {
+        width: 32px;
+        height: 32px;
+    }
+    .share-links img {
+        width: 20px;
+        height: 20px;
+    }
+    .account-menu {
+        display: flex;
+        overflow-x: auto;
+    }
+    .logout {
+        margin-top: 0;
+    }
+    .share {
+        display: none;
+        order: 3;
+    }
+    .stat-menu {
+        width: 100vw;
+    }
+    .stat {
+        display: grid;
+        width: 100vw;
+        border-radius: 0;
+        height: 280px;
+    }
+    .reward {
+        padding-left: 10px;
+        order: 2;
+        width: 300px;
+    }
+    .seasons {
+        order: 1;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 300px;
+    }
+    .seasons-item {
+        width: 67px;
+        height: 60px;
+    }
+    .seasons-item_content_name {
+        font-size: 12px;
+    }
+    .seasons-item_content_number {
+        font-size: 22px;
+    }
+    .seasons-item_content {
+        padding: 10px 7px 10px 10px;
+    }
+    .seasons-menu {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .select {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .reward-item:nth-child(4) {
+        margin-left: 72px;
+    }
+    .season {
+        width: 100vw;
+        overflow-x: auto;
+    }
+    .season-table {
+        width: 429px;
+        height: 42px;
+        font-size: 14px;
+        margin-left: 10px;
+        overflow-x: auto;
+        margin-bottom: 373px;
+    }
+    .season-table tbody tr {
+        height: 42px;
+    }
+    .season-table th:first-child { 
+        width: 40%;
+        padding-left: 10px;
+        padding-right: 17px;
+    }
+    .season-table th:nth-child(2), .season-table th:nth-child(3) {
+        width: 35px;
+        padding-right: 18px;
+        text-align: left;
+    }
+    .footer {
+        height: 320px;
+        width: 100vw;
+    }
+    .footer-links {
+        display: none;
+    }
+    .footer-logo {
+        width: 120px;
+        height: 20px;
+        order: 5;
+        padding-top: 37px;
+        padding-bottom: 20px;
+    }
+    .footer-phone img, .footer-mail img, .footer-line, .footer-contacts, .footer-end {
+        display: none;
+    }
+    .footer-download {
+        order: 4;
+        margin: 0 auto;
+    }
+    .footer-download img{
+        width: 105px;
+        height: 30px;
+    }
+    .footer-icons_mobile {
+        display: flex;
+        color: white;  
+    }
+    .span-mobile {
+        color: white; 
+        display: grid;
+        text-align: center;
+        font-size: 12px;
+    }
+    .spans {
+        color: white; 
+        text-decoration: underline;
+    }
+    .footer-icons_mobile {
+        order: 3;
+        padding-bottom: 33px;
+    }
+    .footer-mail {
+        order: 1;
+        padding-bottom: 10px;
+    }
+    .footer-phone {
+        order: 2;
+        padding-bottom: 20px;
+    }
+    .footer-content {
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+        padding-top: 20px;
+    }
+    .footer-info {
+        width: 100%; 
+        text-align: center;
+        align-items: center;
+    }
+
+}   
